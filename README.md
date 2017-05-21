@@ -1,8 +1,15 @@
 # cpu-visualizer
-This is an arduino project which utilizes serial communications to give a clear CPU visualization.
+This is an adafruit circuit playground project which utilizes serial communications to give a clear CPU visualization. Edit
+Add topics
 
 Compatibility
 ===========
+Client Side
+-----------
+* Adafruit Circuit Playground
+
+Server Side
+-----------
 Currently, CPU Visualizer only supports the following operating systems:
 * Most of Linux distributions
 * MAC
