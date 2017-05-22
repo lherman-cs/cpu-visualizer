@@ -3,7 +3,7 @@ This is an adafruit circuit playground project which utilizes serial communicati
 
 How it works?
 ===========
-CPU Visualizer uses serial communications to get the cpu load from the desire computer. Then from the given cpu load, the arduino will accept it and use this function to calculate the delay:
+CPU Visualizer uses serial communications to get the cpu load from the desire computer. Then from the given cpu load, the arduino will accept it and use reversed sigmoid function to calculate the delay:
 
 ![alt_text](https://github.com/lukashh6/cpu-visualizer/blob/master/client/graph.png?raw=true)
 
