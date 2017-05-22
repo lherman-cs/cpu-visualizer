@@ -20,12 +20,12 @@ while true; do
   let "DIFF_USAGE=(1000*($DIFF_TOTAL-$DIFF_IDLE)/$DIFF_TOTAL+5)/10"
 
 
-  for file in $(ls /dev/ttyACM*)
+  for FILE in $(ls /dev/ttyACM*)
     do
-        if [ -e $file ]
+        if [ -e $FILE ]
         then
             echo $DIFF_USAGE
-            echo $DIFF_USAGE > $file
+            echo $DIFF_USAGE > $FILE
             break
         fi
     done    
