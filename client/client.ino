@@ -1,11 +1,13 @@
 #include <Adafruit_CircuitPlayground.h>
 #include <math.h>
+#include <stdlib.h>
 #define N_PINS 10
 #define E 2.718281828459045
 
 short N = N_PINS - 1;
 uint16_t DELAY = 2000;
 uint16_t MAX_DELAY = 2000;
+uint16_t NORMALIZER = 50;
 
 void setup() {
   Serial.begin(9600);
@@ -16,12 +18,12 @@ void setup() {
 void loop() {
   move();
   if(Serial.available() > 0){
-    double cpuUsage = Serial.parseFloat();
+    int cpuUsage = Serial.parseInt();
     if(cpuUsage > 0)
-      DELAY = MAX_DELAY * (1 - (1 / (1 + pow(E, -((cpuUsage - 50) * 6 / 50))))); // Reversed Sigmoid Function
+      DELAY = MAX_DELAY * (1 - (1 / (1 + pow(E, -((cpuUsage - 50) * 6 / 50))))) + NORMALIZER; // Reversed Sigmoid Function
   }
   delay(DELAY);
-  Serial.println(DELAY);
+//  Serial.println(DELAY);
 }
 
 void move() {
