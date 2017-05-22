@@ -5,8 +5,8 @@
 #define E 2.718281828459045
 
 short N = N_PINS - 1;
-uint16_t DELAY = 2000;
-uint16_t MAX_DELAY = 2000;
+uint16_t DELAY = 1000;
+uint16_t MAX_DELAY = 1000;
 uint16_t NORMALIZER = 50;
 
 void setup() {
