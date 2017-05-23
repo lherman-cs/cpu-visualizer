@@ -25,7 +25,7 @@ while true; do
         if [ -e $FILE ]
         then
             echo $DIFF_USAGE
-            echo $DIFF_USAGE > $FILE
+            echo ${DIFF_USAGE}, > $FILE
             break
         fi
     done    
@@ -35,5 +35,5 @@ while true; do
   PREV_IDLE="$IDLE"
 
   # Wait before checking again.
-  sleep 5
+  sleep 1
 done
