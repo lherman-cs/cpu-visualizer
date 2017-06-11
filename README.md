@@ -17,7 +17,6 @@ Server Side
 -----------
 Currently, CPU Visualizer only supports the following operating systems:
 * Most of Linux distributions
-* MAC
 
 How to install
 ===========
